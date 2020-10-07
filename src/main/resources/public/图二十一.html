@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图二十一</title>
+    <link rel="stylesheet" href="css/图二十.css">
+</head>
+<body>
+<div class="a">
+    <div class="j">
+        <div>视觉系统选择:</div>
+        <div class="biaoge1" id="bg1">1</div>
+        <div class="biaoge" style="background-color: #00FF01" id="bg2">2</div>
+        <div class="biaoge" id="bg3">3</div>
+        <div class="biaoge" id="bg4">4</div>
+        <div class="biaoge" id="bg5">5</div>
+        <div class="biaoge" id="bg6">6</div>
+        <div class="biaoge" id="bg7">7</div>
+        <div class="biaoge" id="bg8">8</div>
+    </div>
+    <div class="b" style="float: left;position:relative">
+        <div class="li">
+            <div class="li" style="margin-top: 1px" id="ysj">
+                <h5 class="abc">TCP通讯状态</h5>
+                <button class="tuoyuan" style="background-color: #01FF00"></button><br>
+                <h5 class="abc">视觉设置状态</h5>
+                <button class="tuoyuan" style="background-color: #00FF01"></button><br>
+                <h5 class="abc">视觉激活状态</h5>
+                <button class="tuoyuan" style="background-color: #FFFFFF"></button><br>
+            </div>
+        </div>
+    </div>
+    <div class="c">
+        <div style="float:left;width: 29%;height: 86%;border: 1px solid #000000;box-sizing: border-box;border-left: 0;border-top: 0;border-right: 0">
+            <div >
+                <h5 style="margin: 0px;float: left;width: 100%;height: 40%;margin-left: 1%">视觉系统选择:</h5>
+
+            </div>
+            <div><h5 style="margin: 0px;float: left;width: 100%;margin-top: 67%;">视觉记录数据</h5></div>
+            <div style="width: 25%;height: 30%;float: left;border-left: 0;">
+                <div class="bgdiv">
+                    <table border="1px solid #949494;">
+                        <tr><td class="bgtd" id="x">X:0.000</td></tr>
+                        <tr><td class="bgtd" id="y">Y:0.000</td></tr>
+                        <tr><td class="bgtd" id="a">A:0.000</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div style="float:left;width: 71%;height: 86%;border: 1px solid #000000;box-sizing: border-box;border-left: 0;border-top: 0;border-right: 0">
+
+            <div style="float: left;width: 100%;height: 20%">
+                <h5 style="margin: 3% 0% 0% 65%;float: left;width: 26%;height: 100%;">拍照位置点有效</h5>
+                <div style="float: left;width: 4%;height: 30%;border-radius: 100%;margin: 4% 1% 0% 1%;border: 1px solid #000000;box-sizing: border-box;"></div>
+            </div>
+
+            <div style="float: left;width: 100%;height: 80%">
+                <div style="width: 60%;float: left;border-left: 0;height: 46%;margin-top: 22.5%">
+                    <input type="button" style="margin: 25% 0% 0% 10%;width: 90%;height: 35%;background-color: #D8D8D8;border-radius: 3px;border: 1px solid #000000;box-sizing: border-box;" value="运动到拍照位置">
+                </div>
+
+                <div style="width: 6%;height: 14%;border-radius: 100%;margin: 38% 1.5% 0% 1.5%;float: left;border: 1px solid #000000;box-sizing: border-box;"></div>
+
+                <div style="width: 25%;height: 30%;float: left;border-left: 0;">
+                    <div class="bgdiv">
+                        <table border="1px solid #949494;">
+                            <tr><td class="bgtd" id="j1">J1:0.000</td></tr>
+                            <tr><td class="bgtd" id="j2">J2:0.000</td></tr>
+                            <tr><td class="bgtd" id="j3">J3:0.000</td></tr>
+                            <tr><td class="bgtd" id="j4">J4:0.000</td></tr>
+                            <tr><td class="bgtd" id="j5">J5:0.000</td></tr>
+                            <tr><td class="bgtd" id="j6">J6:0.000</td></tr>
+                            <tr><td class="bgtd" style="background-color: #C0C0C0" id="j7">J7:0.000</td></tr>
+                            <tr><td class="bgtd" id="j8">J8:0.000</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="float:left;height: 5%;width: 100%;">等待用户按下"记录"按钮,发送图像拍摄指令</div>
+
+        <!--背景图片-->
+        <div style="width:100%;height:100%;background:url(img/f.png) no-repeat center top;background-size:43%;"></div>
+    </div>
+    <button class="d" onclick="javascript:window.location.href='图二十.html'">
+        取消
+    </button>
+    <button class="e" onclick="alert('无')">视觉记录</button>
+    <button class="f" id="pzwzjl">拍照位置记录</button>
+    <div class="g" onclick="window.location.href='index1.html'">完成</div>
+
+</div>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/ggjs.js"></script>
+<script type="text/javascript" >
+    var pzwzjl = document.getElementById("pzwzjl");
+    pzwzjl.onclick = function () {
+        $.ajax({
+            url: "/addprcovrc1",
+            type: 'get',
+            dataType: 'json',
+            data:{
+                x:$('#x').html(),
+                y: $('#y').html(),
+                a: $('#a').html(),
+                j1: $('#j1').html(),
+                j2: $('#j2').html(),
+                j3: $('#j3').html(),
+                j4: $('#j4').html(),
+                j5: $('#j5').html(),
+                j6: $('#j6').html(),
+                j7: $('#j7').html(),
+                j8: $('#j8').html()
+            },
+            success: function (data) {
+                console.log(data);
+                alert(data.msg);
+            }
+        })
+    }
+</script>
+</body>
+</html>

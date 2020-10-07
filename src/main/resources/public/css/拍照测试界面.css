@@ -1,0 +1,23 @@
+.a{width: 524px;
+    height: 351px;
+    background-color: #C0C0C0;
+    margin: auto;
+    margin-top: 100px;}
+.j{width: 70%;height: 20%;float: left;border:1px solid #626262;box-sizing: border-box;}
+.b{width: 30%;height: 20%;float: left;border:1px solid #626262;box-sizing: border-box;border-left:0}
+.c{width: 100%;height: 70%;float: left;border:1px solid #626262;box-sizing: border-box;border-top:0;border-bottom:0;}
+.d{width: 25%;height: 10%;float: left;border:1px solid #626262; box-sizing: border-box;background-color: #D8D8D8;text-align: center;line-height: 35px;font-weight: bold}
+.e{width: 25%;height: 10%;float: left;border:1px solid #626262; box-sizing: border-box;border-left: 0;background-color: #D8D8D8;text-align: center;line-height: 35px;font-weight: bold}
+.f{width: 25%;height: 10%;float: left;border:1px solid #626262; box-sizing: border-box;border-left: 0;background-color: #D8D8D8;text-align: center;line-height: 35px;font-weight: bold}
+.g{width: 25%;height: 10%;float: left;border:1px solid #626262; box-sizing: border-box;border-left: 0;background-color: #D8D8D8;text-align: center;line-height: 35px;font-weight: bold}
+table{text-align: center;margin: 6% 50% 10% 5%;width: 70%;height: 15%;}
+.biaoge1{margin: 2% 0% 2% 3%;float: left;width: 40px;height: 30px;line-height: 30px;text-align: center;background-color: #00FF01;border:1px solid #626262; box-sizing: border-box;}
+.biaoge{margin: 2% 0%;float: left;width: 40px;height: 30px;text-align:center;line-height: 30px;border:1px solid #626262;border-left: 0;background-color: #FFFFFF}
+.li{position:absolute;width: 96%;height: 95%;border:1px solid #403CD1;border-top:0;border-right: 0;margin-left: 1px}
+.tuoyuan{border: 1px solid #626262;float: left;width: 30px;height: 15px;margin:1px 0px 0px 8px;-o-border-radius:100%;-ms-border-radius:100%;-moz-border-radius:100%;-webkit-border-radius:100%;background-color: #00FF01;}
+.abc{float: left;margin: 0px 0px 0px 22px;}
+.bgdiv{width: 100%;height: 34%;float: left;margin: 0px}
+table{margin: 0px;border-collapse:collapse;border-spacing:0;table-layout:fixed;}
+.bgtd{height:17.6px;width: 310px;color: #2A2524;text-align: left;text-indent:0.5em;}
+.bgtda{height:17.6px;width: 39.5px;color: #2A2524;text-align: center;font-size: 10px}
+.hsfk{background-color: red;width: 10%;height: 9%;float: left;margin-top: 1.8%;margin-left: 4%;}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>记录界面</title>
+    <link rel="stylesheet" href="css/记录界面.css">
+</head>
+<body>
+<div class="a">
+    <div class="j">
+        <div>视觉系统选择:</div>
+        <div class="biaoge1" id="bg1">1</div>
+        <div class="biaoge" id="bg2">2</div>
+        <div class="biaoge" id="bg3">3</div>
+        <div class="biaoge" id="bg4">4</div>
+        <div class="biaoge" id="bg5">5</div>
+        <div class="biaoge" id="bg6">6</div>
+        <div class="biaoge" id="bg7">7</div>
+        <div class="biaoge" id="bg8">8</div>
+    </div>
+    <div class="b" style="float: left;position:relative">
+        <div class="li">
+            <div class="li" style="margin-top: 1px" id="ysj">
+                <h5 class="abc">TCP通讯状态</h5>
+                <button class="tuoyuan" style="background-color: #01FF00"></button><br>
+                <h5 class="abc">视觉设置状态</h5>
+                <button class="tuoyuan" style="background-color: #FFFFFF"></button><br>
+                <h5 class="abc">视觉激活状态</h5>
+                <button class="tuoyuan" style="background-color: #FFFFFF"></button><br>
+            </div>
+        </div>
+    </div>
+    <div class="c">
+        <div style="float:left;width: 100%;height: 50%;">
+            <div >
+                <h3 style="margin: 0px;float: left;width: 40%;height: 40%;margin-left: 1%">视觉固定坐标系示教:</h3>
+                <div class="fksq">0.000</div>
+                <h3 style="margin: 0px;float: left;width: 17%;height: 30%">像素/毫秒</h3>
+            </div>
+
+            <div style="height: 50%">
+                <div class="fksq" style="background-color: #ffffff;margin-left: 66%;height: 45%">err: 1.0</div><br><br><br><br><br>
+            </div>
+
+            <div style="width: 100%;height: 20%">
+                <div class="yqa" style="background-color: #01FF00;"></div><h3 style="color: #2B24EF;margin: 0px;margin-left: 0.4%;float: left">P1</h3>
+                <div class="yqa" style="margin-left: 80%;background-color: #01FF00;"></div><h3 style="color: #2B24EF;margin: 0px;margin-left: 0.4%;float: left">P1</h3><br><br>
+            </div>
+
+            <div style="width: 100%;height: 20%">
+                <div class="yqa"></div><h3 style="color: #2B24EF;margin: 0px;margin-left: 0.4%;float: left">P2</h3>
+                <div class="yqa" style="margin-left: 80%"></div><h3 style="color: #2B24EF;margin: 0px;margin-left: 0.4%;float: left">P2</h3><br><br>
+            </div>
+        </div>
+
+        <div style="float:left;width: 100%;height: 40%;">
+            <div><h3 style="margin: 0px;float: left;width: 50%">视觉记录数据</h3></div>
+            <div><h3 style="margin: 0px;float: left;width: 26%;margin-left: 24%;">机器人记录数据</h3></div>
+            <div style="width: 25%;height: 30%;float: left;border-left: 0;">
+                <div class="bgdiv">
+                    <table border="1px solid #949494;">
+                        <tr><td class="bgtd" contenteditable="true" id="x">X:310.000</td></tr>
+                        <tr><td class="bgtd" contenteditable="true" id="y">Y:1455.000</td></tr>
+                        <tr><td class="bgtd" contenteditable="true" id="a">A:5.030</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div style="width: 25%;height: 30%;float: left;border-left: 0;">
+                <div class="bgdiv">
+                    <table style="border-bottom: 1px solid #252B2D">
+                        <tr><td class="bgtd" style="height: 22px;"></td></tr>
+                        <tr><td class="bgtd" style="height: 22px;"></td></tr>
+                        <tr><td class="bgtd" style="height: 22px;"></td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div style="width: 25%;height: 30%;float: left;border-left: 0;">
+                <div class="bgdiv">
+                    <table border="1px solid #949494;">
+                        <tr><td class="bgtd" contenteditable="true" id="x1">X:999.438</td></tr>
+                        <tr><td class="bgtd" contenteditable="true" id="y1">Y:36.899</td></tr>
+                        <tr><td class="bgtd" contenteditable="true" id="z">Z:597.713</td></tr>
+                    </table>
+                </div>
+            </div>
+
+
+            <div style="width: 25%;height: 30%;float: left;border-left: 0;">
+                <div class="bgdiv">
+                    <table border="1px solid #949494;">
+                        <tr><td class="bgtd" contenteditable="true" id="a1">A:-0.000</td></tr>
+                        <tr><td class="bgtd" contenteditable="true" id="b">B:180.000</td></tr>
+                        <tr><td class="bgtd" contenteditable="true" id="c">C:-0.000</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div style="float:left;height: 5%;width: 100%;">已成功获得视觉数据，记录成功，可以进入下一步处理</div>
+
+        <!--背景图片-->
+        <div style="width:100%;height:100%;background:url(img/c.png) no-repeat center top;background-size:44%;"></div>
+    </div>
+    <button class="d"onclick="javascript:window.location.href='记录界面.html'">
+        取消
+    </button>
+    <button class="e" id="sjjl">视觉记录</button>
+    <button class="f" onclick="alert('无')">机器人记录</button>
+    <div class="g"></div>
+
+</div>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/ggjs.js"></script>
+<script type="text/javascript" src="./js/记录界面2.js"></script>
+</body>
+</html>

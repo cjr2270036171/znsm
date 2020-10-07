@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>登录界面</title>
+
+    <meta name="viewport" content="width=device-width">
+
+
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="login">
+    <div>
+        <div class="logo" style="color: #ffff;line-height: 150px;font-size: 40px;font-weight: bolder;margin-left: 55px;">智能双目视觉感应检测系统</div>
+
+        <div class="login_form">
+            <div class="user">
+                <input class="text_value" value="" name="username" type="text" id="username" placeholder="请输入用户名">
+                <input class="text_value" value="" name="password" type="password" id="password" placeholder="请输入密码">
+            </div>
+            <button class="button" id="submit" type="submit" onclick="login()">登录</button>
+        </div>
+
+        <div id="tip"></div>
+
+        <button class="button" id="add_login" type="submit" onclick="zc()">注册用户</button>
+
+        <!--添加用户窗口-->
+        <div class="tjyhck"></div>
+        <div class="tjyhck1">
+            <button id="close" style="margin-left: 373px;border: none;">关闭</button>
+            <input class="text_value" value="" name="username" type="text" id="add_username" placeholder="请输入用户名">
+            <input class="text_value" value="" name="password" type="password" id="add_password" placeholder="请输入密码">
+            <input class="text_value" value="" name="password" type="password" id="add_password1" placeholder="请输入密码">
+            <label id="tishi" style="float: left;margin-left:0px;margin-top: 23px;color: red;font-size: 19px;display: none;"></label>
+            <button class="button" id="add_submit" type="submit" onclick="add_tj()" style="margin-left: 350px;">提交</button>
+        </div>
+
+        <div class="foot">深圳市智言信息科技有限公司</div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

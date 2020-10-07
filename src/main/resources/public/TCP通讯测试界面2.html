@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TCP通讯测试界面2</title>
+    <style>
+        .a{width: 524px;
+            height: 351px;
+            background-color: #C0C0C0;
+            margin: auto;
+            margin-top: 100px;}
+        .j{width: 70%;height: 20%;float: left;border:1px solid #626262;box-sizing: border-box;}
+        .b{width: 30%;height: 20%;float: left;border:1px solid #626262;box-sizing: border-box;border-left:0}
+        .c{width: 100%;height: 70%;float: left;border:1px solid #626262;box-sizing: border-box;border-top:0;}  .e{width: 37.5%;height: 30%;float: left;border:1px solid #626262;box-sizing: border-box;border-left:0;}
+        .f{width: 25%;height: 10%;float: left;border:1px solid #626262; box-sizing: border-box;border-top:0;background-color: #D8D8D8;}
+        .g{width: 25%;height: 10%;float: left;border:1px solid #626262; box-sizing: border-box;border-left: 0;border-top:0;background-color: #D8D8D8;text-align: center;line-height: 35px}
+        .h{width: 25%;height: 10%;float: left;border:1px solid #626262; box-sizing: border-box;border-left: 0;border-top:0;background-color: #D8D8D8;text-align: center;line-height: 35px}
+        .i{width: 25%;height: 10%;float: left;border:1px solid #626262; box-sizing: border-box;border-left: 0;border-top:0;border-right: 0;background-color: #D8D8D8;text-align: center;line-height: 35px}
+        table{text-align: center;margin: 6% 50% 10% 5%;width: 70%;height: 15%;}
+        td{width: 2px;height: 6px;}
+        .biaoge1{margin: 2% 0% 2% 3%;float: left;width: 35px;height: 30px;line-height: 30px;text-align: center;background-color: #00FF01;border:1px solid #626262; box-sizing: border-box;}
+        .biaoge{margin: 2% 0%;float: left;width: 35px;height: 30px;text-align:center;line-height: 30px;border:1px solid #626262;border-left: 0;background-color: #FFFFFF}
+        .abc{float: left;margin: 0px 0px 0px 10px}
+        .li{position:absolute;width: 96%;height: 95%;border:1px solid #403CD1;border-top:0;border-right: 0;margin-left: 1px}
+        .tuoyuan{border: 1px solid #626262;float: left;width: 30px;height: 15px;margin:1px 0px 0px 3px;-o-border-radius:100%;-ms-border-radius:100%;-moz-border-radius:100%;-webkit-border-radius:100%;background-color: #00FF01;}
+        td{height: 23px;width: 89px;color: #0000FF}
+        table{margin: 0px;border-collapse:collapse;border-spacing:0;table-layout:fixed;}
+        .bgdiv{width: 100%;height: 34%;float: left;margin: 0px}
+    </style>
+</head>
+<body>
+<div class="a">
+    <div class="j">
+        <h4 style="margin: 0px">&nbsp;&nbsp;视觉系统选择:</h4>
+        <button class="biaoge1">1</button>
+        <button class="biaoge">2</button>
+        <button class="biaoge">3</button>
+        <button class="biaoge">4</button>
+        <button class="biaoge">5</button>
+        <button class="biaoge">6</button>
+        <button class="biaoge">7</button>
+        <button class="biaoge">8</button>
+    </div>
+    <div class="b" style="float: left;position:relative">
+        <div class="li">
+            <div class="li" style="margin-top: 1px;">
+                <h6 class="abc">TCP通讯状态</h6>
+                <button class="tuoyuan" style="background-color: #00FF01"></button><br>
+                <h6 class="abc">视觉设置状态</h6>
+                <button class="tuoyuan" style="background-color: #00FF01"></button><br>
+                <h6 class="abc">视觉激活状态</h6>
+                <button class="tuoyuan" style="background-color: #00FF01"></button><br>
+            </div>
+        </div>
+    </div>
+    <div class="c" style="background-color: #C0C0C0">
+
+        <div style="width: 41.5%;height: 99%;float: left">
+
+            <div class="bgdiv" style="width: 50%;">
+                <table border="1px solid #FFFFFF;">
+                    <tr><td id="px">Px:-157.739</td></tr>
+                    <tr><td id="py">Py:-347.315</td></tr>
+                    <tr><td id="pz">Pz:360.000</td></tr>
+                </table>
+            </div>
+
+            <div class="bgdiv">
+                <table border="1px solid #FFFFFF";>
+                    <tr>
+                        <td id="tx">Tx:360.000</td>
+                        <td id="ta">Ta:0.000</td>
+                    </tr>
+                    <tr><td id="ty">Ty:213.78</td>
+                        <td id="tb">Tb:0.000</td>
+                    </tr>
+                    <tr><td id="tz">Tz:-315.922</td>
+                        <td id="tc">Tc:0.000</td></tr>
+                </table>
+            </div>
+
+            <div class="bgdiv">
+                <table border="1px solid #FFFFFF";>
+                    <tr><td id="x">X:111.578</td>
+                        <td id="a">A:80.340</td></tr>
+                    <tr><td id="y">Y:213.782</td>
+                        <td id="b">B:0.000</td></tr>
+                    <tr><td id="z">Z:300.000</td>
+                        <td id="c">C:0.000</td></tr>
+                </table>
+            </div>
+
+        </div>
+
+
+        <div style="width: 58.5%;height: 70%;background-color: #FFFFFF;float: left;text-align: left;font-size: 12.5px">
+            8.Vision TCP client connect OK<br>
+            9.Vision TCP client waiting robot ready...<br>
+            12.Vision TCP client send cmd "ROBOTOK".<br>
+            16.Vision TCP OK. waiting snap signal...<br>
+            19.Vision TCP client heart beat check... waiting<br>
+            16.Vision TCP OK.waiting snap signal...<br>
+            19.VisionTCPclient.heart beat check...waition<br>
+            16.Vision TCP OK,wautubf snap signal...
+        </div>
+
+
+        <div style="width: 7%;height: 10%;background-color: red;float: left;margin-top: 9.5%;
+    margin-left: 1%;">
+
+        </div>
+
+        <div style="width: 35%;height: 10%;background-color: #C0C0C0;float: left;margin-top: 9.5%;">
+            曝光信号
+        </div>
+
+
+    </div>
+
+    <div class="f"></div>
+    <button class="g" style="font-weight:bold;">通讯数据</button>
+    <button class="h" style="font-weight:bold;">激活视野对象</button>
+    <button class="i" style="font-weight:bold;" onclick="javascript:window.location.href='TCP已建立连接时的状态.html'">上一步</button>
+</div>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" >
+    shuju();
+    //此时的数字传到index
+    function shuju() {
+        $.ajax({
+            url: "/tsxslogin",
+            type: 'get',
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                var i = data.data.length - 1;
+                $('#px').html(data.data[i].px);
+                $('#py').html(data.data[i].py);
+                $('#pz').html(data.data[i].pz);
+                $('#tx').html(data.data[i].tx);
+                $('#ty').html(data.data[i].ty);
+                $('#tz').html(data.data[i].tz);
+                $('#ta').html(data.data[i].ta);
+                $('#tb').html(data.data[i].tb);
+                $('#tc').html(data.data[i].tc);
+                $('#x').html(data.data[i].x);
+                $('#y').html(data.data[i].y);
+                $('#z').html(data.data[i].z);
+                $('#a').html(data.data[i].a);
+                $('#b').html(data.data[i].b);
+                $('#c').html(data.data[i].c);
+            }
+        })
+    }
+</script>
+</body>
+</html>

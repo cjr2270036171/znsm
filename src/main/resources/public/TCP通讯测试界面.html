@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TCP通讯测试界面</title>
+    <link rel="stylesheet" href="css/TCP通讯测试界面.css">
+</head>
+<body>
+<div class="a">
+    <div class="ce">
+        <div style="float: left;background-color: #037FC2;">
+            <button class="ces" onclick="alert('无')">变量</button>
+            <button class="ces" onclick="alert('无')">工艺</button>
+            <button class="ces" onclick="window.location.href = '状态管理界面.html'">状态</button>
+            <button class="ces" onclick="alert('无')">机器人</button>
+            <button class="ces" onclick="alert('无')">系统信息</button>
+            <button class="ces" onclick="window.location.href = '视觉设置界面.html'">设置</button>
+        </div>
+    </div>
+    <div class="j">
+        <h4 style="margin: 0px">&nbsp;&nbsp;视觉系统选择:</h4>
+        <button class="biaoge1" id="bg1">1</button>
+        <button class="biaoge" id="bg2">2</button>
+        <button class="biaoge" id="bg3">3</button>
+        <button class="biaoge" id="bg4">4</button>
+        <button class="biaoge" id="bg5">5</button>
+        <button class="biaoge" id="bg6">6</button>
+        <button class="biaoge" id="bg7">7</button>
+        <button class="biaoge" id="bg8">8</button>
+    </div>
+    <div class="b" style="float: left;position:relative">
+        <div class="li">
+            <div class="li" style="margin-top: 1px;" id="ysj">
+                <h6 class="abc">TCP通讯状态</h6>
+                <button class="tuoyuan"></button><br>
+                <h6 class="abc">视觉设置状态</h6>
+                <button class="tuoyuan" style="background-color: #FFFFFF"></button><br>
+                <h6 class="abc">视觉激活状态</h6>
+                <button class="tuoyuan" style="background-color: #FFFFFF"></button><br>
+            </div>
+        </div>
+    </div>
+    <div class="c" style="background-color: #C0C0C0">
+
+        <div style="width: 41.5%;height: 99%;float: left">
+
+            <div class="bgdiv" style="width: 50%;">
+                <table border="1px solid #FFFFFF;">
+                    <tr><td>Px:0.000</td></tr>
+                    <tr><td>Py:0.000</td></tr>
+                    <tr><td>Pz:0.000</td></tr>
+                </table>
+            </div>
+
+            <div class="bgdiv">
+                <table border="1px solid #FFFFFF";>
+                    <tr>
+                        <td>Px:0.000</td>
+                        <td>Ta:0.000</td>
+                    </tr>
+                    <tr><td>Py:0.000</td>
+                        <td>Tb:0.000</td>
+                    </tr>
+                    <tr><td>Pz:0.000</td>
+                        <td>Tc:0.000</td></tr>
+                </table>
+            </div>
+
+            <div class="bgdiv">
+                <table border="1px solid #FFFFFF";>
+                    <tr><td>Px:0.000</td>
+                        <td>Ta:0.000</td></tr>
+                    <tr><td>Py:0.000</td>
+                        <td>Tb:0.000</td></tr>
+                    <tr><td>Pz:0.000</td>
+                        <td>Tc:0.000</td></tr>
+                </table>
+            </div>
+
+        </div>
+
+
+        <div style="width: 58.5%;height: 70%;background-color: #FFFFFF;float: left;text-align: left;font-size: 12.5px">
+            8.Vision TCP client connect OK<br>
+            9.Vision TCP client waiting robot ready...<br>
+            12.Vision TCP client send cmd "ROBOTOK".<br>
+            16.Vision TCP OK. waiting snap signal...<br>
+            19.Vision TCP client heart beat check... waiting<br>
+            16.Vision TCP OK.waiting snap signal...<br>
+            19.VisionTCPclient.heart beat check...waition<br>
+            16.Vision TCP OK,wautubf snap signal...
+        </div>
+
+
+        <div style="width: 7%;height: 10%;background-color: red;float: left;margin-top: 9.5%;
+    margin-left: 1%;">
+
+        </div>
+
+        <div style="width: 35%;height: 10%;background-color: #C0C0C0;float: left;margin-top: 9.5%;">
+            曝光信号
+        </div>
+
+
+    </div>
+
+    <div class="f"></div>
+    <button class="g" style="font-weight:bold;" id="txsj">通讯数据</button>
+    <button class="h" style="font-weight:bold;" onclick="javascript:window.location.href='拍照测试界面.html'">拍照测试</button>
+    <button class="i" style="font-weight:bold;" onclick="javascript:window.location.href='状态管理界面.html'">上一步</button>
+</div>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/ggjs.js"></script>
+<script type="text/javascript" >
+    /**
+     * 通讯数据
+     */
+    var txsj = document.getElementById("txsj")
+    txsj.onclick = function () {
+        alert("无")
+    }
+</script>
+</body>
+</html>
+

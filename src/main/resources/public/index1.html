@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视觉参数配置主界面</title>
+    <link rel="stylesheet" type="text/css" href="css/视觉参数配置主界面.css">
+</head>
+<body>
+<div class="main">
+    <!--数字1-8区域-->
+    <div class="a">
+        <div>视觉系统选择:</div>
+        <button class="biaoge1" id="bg1">1</button>
+        <button class="biaoge" id="bg2">2</button>
+        <button class="biaoge" id="bg3">3</button>
+        <button class="biaoge" id="bg4">4</button>
+        <button class="biaoge" id="bg5">5</button>
+        <button class="biaoge" id="bg6">6</button>
+        <button class="biaoge" id="bg7">7</button>
+        <button class="biaoge" id="bg8">8</button>
+    </div>
+    <!--右上角区域-->
+    <div class="b" style="float: left;position:relative">
+        <div class="li">
+            <div class="li" style="margin-top: 1px" id="ysj">
+                <h5 class="abc">TCP通讯状态</h5>
+                <button class="tuoyuan"></button><br>
+                <h5 class="abc">视觉设置状态</h5>
+                <button class="tuoyuan" style="background-color: #FFFFFF"></button><br>
+                <h5 class="abc">视觉激活状态</h5>
+                <button class="tuoyuan" style="background-color: #FFFFFF"></button><br>
+            </div>
+        </div>
+    </div>
+    <!--视觉选择区域-->
+    <div class="c">
+        <button class="yuan" style="margin-top: 10px;background-color:#00FF01" id="yq1"></button><div class="sjs" style="margin-top: 10px;">固定视觉</div><br><br>
+        <button class="yuan" id="yq2"></button><div class="sjs">固定视觉</div><br><br>
+        <button class="yuan" id="yq3"></button><div class="sjs">移动视觉</div>
+        <div style="float: left;background-color: #C0C0C0;width: 29%;height: 20%;margin: 15px 0px  0px 40px" id="yc">
+            <input type="image" src="img/b.png/" value="" class="jiantou" id="jt1"><div class="shuzi" id="sz">1</div>
+            <input type="image" src="img/a.png" value="" class="jiantou" id="jt2">
+            <button class="yuan" style="margin:0px 0px 0px 26px;width: 29px;height: 29px;background-color:#C0C0C0;border: 1px solid #898989;" id="an"></button>
+        </div>
+    </div>
+    <!--坐标系区域左-->
+    <div class="d">
+        <h4 style="margin: 0px">视觉固定坐标系：</h4>
+        <div style="float: left;width: 43%;height: 70%">
+            <div class="zb" id="x">X:0.000</div>
+            <div class="zb" id="y">Y:0.000</div>
+            <div class="zb" id="z">Z:0.000</div>
+        </div>
+        <div style="float: left;width: 45%;height: 70%;margin-left: 20px">
+            <div class="zb" id="a">A:0.000</div>
+            <div class="zb" id="b">B:0.000</div>
+            <div class="zb" id="c">C:0.000</div>
+        </div>
+    </div>
+    <!--坐标系区域右-->
+    <div class="e">
+        <div  class="zb2">
+            <div style="float: left;">X方向</div><br>
+            <div class="fangkuan" id="x1">0.000</div>
+            <div style="float: left;margin:0px;width: 35%">像素/毫秒</div>
+        </div>
+        <div   class="zb2">
+            <div style="float: left;">Y方向</div><br>
+            <div class="fangkuan" id="y1">0.000</div>
+            <div style="float: left;margin:0px;width: 35%">像素/毫秒</div>
+        </div>
+    </div>
+    <!--按钮区域-->
+    <button class="f" style="font-weight: bold" onclick="javascript:window.location.href='状态管理界面.html'">
+        状态
+    </button>
+    <button class="g" style="font-weight: bold" id="qc">清除</button>
+    <!--修改和设置只有在非激活状态下才能操作,在状态管 理界面可以手动激活或者取消激活相应的视觉系统-->
+    <button class="h" style="font-weight: bold" onclick="javascript:window.location.href='修改坐标数据等界面.html'">修改</button>
+    <button class="i" style="font-weight: bold" onclick="javascript:window.location.href='视觉设置界面.html'">
+        设置
+    </button>
+</div>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="./js/ggjs.js"></script>
+<script type="text/javascript" src="./js/修改坐标数据等界面.js"></script>
+<script type="text/javascript">
+    shuzhi();
+    //此时的数字传到index
+    function shuzhi() {
+        $.ajax({
+            url: "/getAllindex",
+            type: 'get',
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                var i = data.data.length - 1;
+                $('#x').html(data.data[i].x);
+                $('#y').html(data.data[i].y);
+                $('#z').html(data.data[i].z);
+                $('#a').html(data.data[i].a);
+                $('#b').html(data.data[i].b);
+                $('#c').html(data.data[i].c);
+                $('#x1').html(data.data[i].x1);
+                $('#y1').html(data.data[i].y1);
+            }
+        })
+    }
+</script>
+</body>
+</html>

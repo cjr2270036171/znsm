@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改坐标数据等界面</title>
+    <link rel="stylesheet" href="css/修改坐标数据等界面.css">
+</head>
+<body>
+<div class="a">
+    <div class="j">
+        <div>视觉系统选择:</div>
+        <button class="biaoge1" id="bg1">1</button>
+        <button class="biaoge" id="bg2">2</button>
+        <button class="biaoge" id="bg3">3</button>
+        <button class="biaoge" id="bg4">4</button>
+        <button class="biaoge" id="bg5">5</button>
+        <button class="biaoge" id="bg6">6</button>
+        <button class="biaoge" id="bg7">7</button>
+        <button class="biaoge" id="bg8">8</button>
+    </div>
+    <div class="b" style="float: left;position:relative">
+        <div class="li">
+            <div class="li" style="margin-top: 1px" id="ysj">
+                <h5 class="abc">TCP通讯状态</h5>
+                <button class="tuoyuan"></button><br>
+                <h5 class="abc">视觉设置状态</h5>
+                <button class="tuoyuan"></button><br>
+                <h5 class="abc">视觉激活状态</h5>
+                <button class="tuoyuan" style="background-color: #FFFFFF"></button><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="c">
+        <div style="height: 100%;width: 40%;float: left"><button class="an" onclick="wc()">手动设置ok</button></div>
+        <div class="qiu"></div>
+    </div>
+
+    <div class="d">
+        <h3 style="margin: 3%;margin-top: 10%;margin-left: 10%">视觉固定坐标系：</h3>
+        <div style="float: left;width: 43%;height: 70%">
+            <div class="zb" style="margin-left: 21%;" contenteditable="true" id="x">X:980.949</div>
+            <div class="zb" style="margin-left: 21%;" contenteditable="true" id="y">Y:40.843</div>
+            <div class="zb" style="margin-left: 21%;" contenteditable="true" id="z">Z:597.713</div>
+        </div>
+        <div style="float: left;width: 45%;height: 70%">
+            <div class="zb" style="width: 86%;" contenteditable="true" id="a">A:-90.000</div>
+            <div class="zb" style="width: 86%;" contenteditable="true" id="b">B:0.000</div>
+            <div class="zb" style="width: 86%;" contenteditable="true" id="c">C:0.000</div>
+        </div>
+    </div>
+    <div class="asd"></div>
+    <div class="e">
+        <div  class="zb2" style="margin-top: 14%;">
+            <div style="float: left;">X方向</div><br>
+            <div class="fangkuan" style="margin-top: 2%;" contenteditable="true" id="x1">78.595</div>
+            <div style="float: left;margin:0px;width: 35%;margin-top: 2%;">像素/毫秒</div>
+        </div>
+        <div   class="zb2">
+            <div style="float: left;">Y方向</div><br>
+            <div class="fangkuan" style="margin-top: 2%;" contenteditable="true" id="y1">78.694</div>
+            <div style="float: left;margin:0px;width: 35%;margin-top: 2%;">像素/毫秒</div>
+        </div>
+    </div>
+    <button class="f" style="font-weight: bold" onclick="javascript:window.location.href='index1.html'">
+        取消
+    </button>
+    <button class="g" style="font-weight: bold" ></button>
+    <button class="h" style="font-weight: bold" onclick="syb()">上一步</button>
+    <button class="i" style="font-weight: bold" onclick="wc()">
+        完成
+    </button>
+</div>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/ggjs.js"></script>
+<script type="text/javascript" src="./js/修改坐标数据等界面.js"></script>
+</body>
+</html>

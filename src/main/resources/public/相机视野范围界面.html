@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视觉参数配置主界面</title>
+    <link rel="stylesheet" href="css/相机视野范围界面.css">
+</head>
+<body>
+<div class="a">
+    <div class="j">
+        <div>视觉系统选择:</div>
+        <div class="biaoge1" id="bg1">1</div>
+        <div class="biaoge" id="bg2">2</div>
+        <div class="biaoge" id="bg3">3</div>
+        <div class="biaoge" id="bg4">4</div>
+        <div class="biaoge" id="bg5">5</div>
+        <div class="biaoge" id="bg6">6</div>
+        <div class="biaoge" id="bg7">7</div>
+        <div class="biaoge" id="bg8">8</div>
+    </div>
+    <div class="b" style="float: left;position:relative">
+        <div class="li">
+            <div class="li" style="margin-top: 1px;" id="ysj">
+                <h5 class="abc">TCP通讯状态</h5>
+                <button class="tuoyuan"></button><br>
+                <h5 class="abc">视觉设置状态</h5>
+                <button class="tuoyuan" style="background-color: #FFFFFF"></button><br>
+                <h5 class="abc">视觉激活状态</h5>
+                <button class="tuoyuan" style="background-color: #FFFFFF"></button><br>
+            </div>
+        </div>
+    </div>
+    <div class="c">
+        <div style="width: 80%;height: 100%;background-color: #C0C0C0;float: left">
+            <div style="margin: 4% 0 0 2%;width: 100%;height:15% ">
+                <h3 style="width: 50%;float: left;margin: 0px">相机视野范围标定</h3>
+                <div class="yuan" id="yuan"></div>
+                <h3 style="float: left;margin: 0px 0px 0px 5%;width: 30%;">范围监控有效</h3>
+            </div>
+
+            <div style="width: 85%;height: 1%;margin-left: 2%;background-color: #7B7B7B"></div>
+
+            <div><h3 style="margin: 1% 0% 0% 30%;width: 15%;display: inline-block;">最小值</h3>
+                <h3 style="display: inline-block;margin: 1% 0% 0% 10%;width: 15%">最大值</h3></div>
+
+            <div class="sjt">
+                <div><h3 style="margin: 0;margin-left: 2%;width: 23%;display: inline-block;">X方向范围</h3>
+                    <input type="text" value="0.000" class="shuju" id="xmin" readonly="readonly">
+                    <input type="text" value="600.000" class="shuju" id="xmax" readonly="readonly">
+                    <h3 style="display: inline-block;margin: 0;width: 18%">相机单位</h3>
+                </div>
+            </div>
+
+            <div class="sjt">
+                <div><h3 style="margin: 0;margin-left: 2%;width: 23%;display: inline-block;">Y方向范围</h3>
+                    <input type="text" value="0.000" class="shuju" id="ymin" readonly="readonly">
+                    <input type="text" value="600.000" class="shuju" id="ymax" readonly="readonly">
+                    <h3 style="display: inline-block;margin: 0;width: 18%">相机单位</h3>
+                </div>
+            </div>
+
+            <div class="sjt">
+                <div><h3 style="margin: 0;margin-left: 2%;width: 23%;display: inline-block;">角度范围1</h3>
+                    <input type="text" value="-360.000" class="shuju" id="jd1min">
+                    <input type="text" value="360.000" class="shuju" id="jd1max">
+                    <h3 style="display: inline-block;margin: 0;width: 18%">角度</h3>
+                </div>
+            </div>
+
+            <div class="sjt">
+                <div><h3 style="margin: 0;margin-left: 2%;width: 23%;display: inline-block;">角度范围2</h3>
+                    <input type="text" value="-360.000" class="shuju" id="jd2min">
+                    <input type="text" value="360.000" class="shuju" id="jd2max">
+                    <h3 style="display: inline-block;margin: 0;width: 18%">角度</h3>
+                </div>
+            </div>
+            <h4 style="margin-top: 6%;">等待用户按下"记录"按钮,发送图像拍摄指令</h4>
+        </div>
+
+
+        <div style="width: 20%;height: 100%;background-color: #C0C0C0;float: left">
+            <div class="you" style="margin-top: 20%;color:#3A3BEC">0</div><div class="you" style="margin-left: 2%;margin-top: 20%">:X1</div>
+            <div class="xtt"></div>
+
+            <div class="you" style="color:#3A3BEC ">0</div><div class="you" style="margin-left: 2%;">:Y1</div>
+            <div class="xtt"></div>
+
+            <div class="you" style="color:#3A3BEC ">0</div><div class="you" style="margin-left: 2%;">:A1</div>
+            <div class="xtt"></div>
+
+            <div class="you" style="color:#3A3BEC;margin-top: 10%">0</div><div class="you" style="margin-left: 2%;margin-top: 10%">:X2</div>
+            <div class="xtt"></div>
+
+            <div class="you" style="color:#3A3BEC ">0</div><div class="you" style="margin-left: 2%;">:Y2</div>
+            <div class="xtt"></div>
+
+            <div class="you" style="color:#3A3BEC ">0</div><div class="you" style="margin-left: 2%;">:A2</div>
+            <div class="xtt"></div>
+        </div>
+    </div>
+    <div class="d"></div>
+    <button class="e" id="jl">记录</button>
+    <button class="f" id="qc">清除</button>
+    <button class="g" id="wc">完成</button>
+</div>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/ggjs.js"></script>
+<script type="text/javascript" src="./js/相机视野范围界面.js"></script>
+</body>
+</html>

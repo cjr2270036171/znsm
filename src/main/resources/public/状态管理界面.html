@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>状态管理界面</title>
+    <link rel="stylesheet" type="text/css" href="css/状态管理界面.css">
+    </head>
+<body>
+<div class="a">
+    <div class="j blue">
+        <div>视觉系统选择:</div>
+        <button class="biaoge1" id="bg1">1</button>
+        <button class="biaoge" id="bg2">2</button>
+        <button class="biaoge" id="bg3">3</button>
+        <button class="biaoge" id="bg4">4</button>
+        <button class="biaoge" id="bg5">5</button>
+        <button class="biaoge" id="bg6">6</button>
+        <button class="biaoge" id="bg7">7</button>
+        <button class="biaoge" id="bg8">8</button>
+    </div>
+    <div class="b" style="float: left;position:relative">
+        <div class="li">
+            <div class="li" style="margin-top: 1px;" id="ysj">
+            <h5 class="abc">TCP通讯状态</h5>
+            <button class="tuoyuan"></button><br>
+            <h5 class="abc">视觉设置状态</h5>
+            <button class="tuoyuan" style="background-color: #FFFFFF"></button><br>
+            <h5 class="abc">视觉激活状态</h5>
+            <button class="tuoyuan" style="background-color: #FFFFFF"></button><br>
+            </div>
+        </div>
+    </div>
+    <div class="c orange">
+        <h4 class="hdz">IP地址:<input type="text" class="idz" value="192.168.0.8" id="ipdz"></h4>
+        <h4 style="padding: 6px 10px 2px 10px;margin: 10px 0px 0px 40px;">端口号:<input type="text" class="idz" value="55555" id="dkh"></h4>
+        <h4 style="padding: 6px 10px 2px 10px;margin: 10px 0px 0px 23px">相机命令:<input type="text" class="idz" value="GetPIC" id="cmd"></h4>
+        <h4 style="padding: 15px 0px 2px 20px;margin: 10px 0px 0px 50px; width: 140px;float: left"><button id="al">连接</button></h4><div class="idzz"></div>
+    </div>
+    <div class="d yellow">
+        <div class="qwe" style="margin: 40px 40px 0px 40px;">忽略角度<button class="idzzz"></button></div>
+        <div class="qwe">角度取反<button class="idzzz"></button></div>
+        <div class="qwe">对称<button class="idzzz"></button></div>
+    </div>
+    <div class="e blue">
+        <button class="qwe" style="margin: 40px 40px 0px 40px; height: 30px;text-align: center;line-height: 30px" onclick="xdl()">系统激活</button>
+    </div>
+    <button class="f green" style="background-color: #D8D8D8;"></button>
+    <button class="g orange" style="font-weight: bold" onclick="xdl()">信号管理</button>
+    <button class="h yellow" style="font-weight: bold" onclick="javascript:window.location.href='TCP通讯测试界面.html'">通讯数据</button>
+    <button class="i blue" onclick="javascript:window.location.href='index1.html'" style="font-weight: bold">上一步</button>
+</div>
+<script type="text/javascript"  src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/状态管理界面.js"></script>
+<script type="text/javascript" src="./js/ggjs.js"></script>
+</body>
+</html>

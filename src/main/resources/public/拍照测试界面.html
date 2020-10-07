@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拍照测试界面</title>
+    <link rel="stylesheet" href="css/拍照测试界面.css">
+</head>
+<body>
+<div class="a">
+    <div class="j">
+        <div>视觉系统选择:</div>
+        <div class="biaoge1" id="bg1">1</div>
+        <div class="biaoge" id="bg2">2</div>
+        <div class="biaoge" id="bg3">3</div>
+        <div class="biaoge" id="bg4">4</div>
+        <div class="biaoge" id="bg5">5</div>
+        <div class="biaoge" id="bg6">6</div>
+        <div class="biaoge" id="bg7">7</div>
+        <div class="biaoge" id="bg8">8</div>
+    </div>
+    <div class="b" style="float: left;position:relative">
+        <div class="li">
+            <div class="li" style="margin-top: 1px;" id="ysj">
+                <h5 class="abc">TCP通讯状态</h5>
+                <button class="tuoyuan"></button><br>
+                <h5 class="abc">视觉设置状态</h5>
+                <button class="tuoyuan" style="background-color: #FFFFFF"></button><br>
+                <h5 class="abc">视觉激活状态</h5>
+                <button class="tuoyuan" style="background-color: #FFFFFF"></button><br>
+            </div>
+        </div>
+    </div>
+    <div class="c">
+        <div style="width: 60%;height: 100%;float: left;border-left: 0;">
+            <div class="bgdiv" style="height: 80%;margin-top: 15px">
+                <table border="1px solid #949494;">
+                    <tr><td class="bgtd">0:Image</td></tr>
+                    <tr><td class="bgtd">1:[X:457,89;Y:268,91A:80,34]</td></tr>
+                    <tr><td class="bgtd">2:[X:457,89;Y:268,91A:80,34]</td></tr>
+                    <tr><td class="bgtd">3:Demo</td></tr>
+                    <tr><td class="bgtd"></td></tr>
+                    <tr><td class="bgtd"></td></tr>
+                    <tr><td class="bgtd"></td></tr>
+                    <tr><td class="bgtd"></td></tr>
+                    <tr><td class="bgtd">3:Demo</td></tr>
+                </table>
+            </div>
+            <div class="hsfk"></div><h5 style="float: left;margin: 2.5%">曝光信号</h5>
+        </div>
+
+        <div style="background-color: #C0C0C0;width: 40%;height: 100%;float: left">
+            <table border="1px solid #949494;" style="margin-top: 6px">
+                <tr>
+                    <th class="bgtda">X</th>
+                    <th class="bgtda">Y</th>
+                    <th class="bgtda">Ang</th>
+                    <th class="bgtda">Attr</th>
+                    <th class="bgtda">Atv</th>
+                </tr>
+                <tr>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0</td>
+                    <td class="bgtda"></td>
+                </tr>
+                <tr>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0</td>
+                    <td class="bgtda"></td>
+                </tr>
+                <tr>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0</td>
+                    <td class="bgtda"></td>
+                </tr>
+                <tr>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0</td>
+                    <td class="bgtda"></td>
+                </tr>
+                <tr>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0</td>
+                    <td class="bgtda"></td>
+                </tr>
+                <tr>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0</td>
+                    <td class="bgtda"></td>
+                </tr>
+                <tr>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0</td>
+                    <td class="bgtda"></td>
+                </tr>
+                <tr>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0</td>
+                    <td class="bgtda"></td>
+                </tr>
+                <tr>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0</td>
+                    <td class="bgtda"></td>
+                </tr>
+                <tr>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda">0.0</td>
+                    <td class="bgtda"></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <div class="d" id="txzt">通讯状态</div>
+    <div class="e"></div>
+    <div class="f" id="pzcs">拍照测试</div>
+    <div class="g" onclick="javascript:window.location.href='TCP通讯测试界面.html'">上一步</div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="./js/ggjs.js"></script>
+<script type="text/javascript" >
+    /**
+     * 通讯状态
+     * @type {HTMLElement}
+     */
+    var txzt = document.getElementById("txzt")
+    txzt.onclick = function () {
+        alert("无")
+    }
+    /**
+     * 拍照测试
+     * @type {HTMLElement}
+     */
+    var pzcs = document.getElementById("pzcs")
+    pzcs.onclick = function () {
+        alert("无")
+    }
+</script>
+</body>
+</html>

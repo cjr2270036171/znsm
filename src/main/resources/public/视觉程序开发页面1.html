@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .a{width: 180px;height: 150px;background-color: #0180C0;margin: auto;margin-top: 100px;}
+        .zuo{width: 85%;height: 17.5%;background-color: #C0C0C0;border-radius: 5px;border: 1px solid #000000;box-sizing: border-box;margin: 3.5% auto;text-align: center;line-height: 290%;font-weight: bolder;font-size: x-small;}
+        .you{width: 93%;height: 19%;background-color: #C0C0C0;border-radius: 5px;border: 1px solid #000000;box-sizing: border-box;margin: 1% 3%;text-align: center;line-height: 150%;font-weight: bolder;}
+    </style>
+</head>
+<body>
+<div class="a">
+    <div style="width: 50%;height: 100%;float: left;border: 1px solid #ffffff;box-sizing: border-box">
+        <div class="zuo" style="background-color: #0080C0;border: 1px solid #ffffff;box-sizing: border-box;" id="dm1">VISPICSNAP</div>
+        <div class="zuo" id="dm2">VISGETPIC</div>
+        <div class="zuo" id="d3">VISGETMPIC</div>
+        <div class="zuo" id="dm4">VISACTOBJ</div>
+        <div class="zuo" id="dm5">VISSEND</div>
+    </div>
+    <div style="width: 50%;height: 100%;float: left;border: 1px solid #ffffff;box-sizing: border-box">
+        <button class="you" id="sj" value="1">视觉</button>
+        <button class="you" id="gj" value="2">高级</button>
+        <button class="you" id="yl1" value="3">预留</button>
+        <button class="you" id="yl2" value="4">预留</button>
+        <button class="you" id="yl3" value="5">预留</button>
+    </div>
+</div>
+<script type="text/javascript" >
+    var sj = document.getElementById("sj");
+    var gj = document.getElementById("gj");
+    var yl1 = document.getElementById("yl1");
+    var yl2 = document.getElementById("yl2");
+    var yl3 = document.getElementById("yl3");
+    var dm1 = document.getElementById("dm1");
+    var dm2 = document.getElementById("dm2");
+    var dm3 = document.getElementById("dm3");
+    var dm4 = document.getElementById("dm4");
+    var dm5 = document.getElementById("dm5");
+
+
+    //此时所在位置
+    var a = 1;
+    //上下键
+    var sx = 0;
+    /**
+     * 键盘上下键移动 -- 当sx为负值时 按上键不能继续往上走
+     */
+    function showkey(){
+        key = event.keyCode;
+        switch (key) {
+
+            /**
+             * 37代表←事件
+             */
+            case 37:
+                q = sj.style.backgroundColor
+                if (q == "rgb(0, 128, 192)"){
+                    key2 = event.keyCode;
+                    //左
+                    switch (key2) {
+                        /**
+                         * 38 代表↑事件
+                         */
+                        case 38:
+                            sx = sx - 1;
+                            a = sx % 5;
+                            if (sx > 0 ) {
+                                if (a >= 0){
+                                    switch (a) {
+                                        case 1:
+                                            sj.style.backgroundColor = "#0080C0";
+                                            gj.style.backgroundColor = "#C0C0C0";
+                                            yl1.style.backgroundColor = "#C0C0C0";
+                                            yl2.style.backgroundColor = "#C0C0C0";
+                                            yl3.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 2:
+                                            sj.style.backgroundColor = "#C0C0C0";
+                                            gj.style.backgroundColor = "#0080C0";
+                                            yl1.style.backgroundColor = "#C0C0C0";
+                                            yl2.style.backgroundColor = "#C0C0C0";
+                                            yl3.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 3:
+                                            sj.style.backgroundColor = "#C0C0C0";
+                                            gj.style.backgroundColor = "#C0C0C0";
+                                            yl1.style.backgroundColor = "#0080C0";
+                                            yl2.style.backgroundColor = "#C0C0C0";
+                                            yl3.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 4:
+                                            sj.style.backgroundColor = "#C0C0C0";
+                                            gj.style.backgroundColor = "#C0C0C0";
+                                            yl1.style.backgroundColor = "#C0C0C0";
+                                            yl2.style.backgroundColor = "#0080C0";
+                                            yl3.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 0:
+                                            sj.style.backgroundColor = "#C0C0C0";
+                                            gj.style.backgroundColor = "#C0C0C0";
+                                            yl1.style.backgroundColor = "#C0C0C0";
+                                            yl2.style.backgroundColor = "#C0C0C0";
+                                            yl3.style.backgroundColor = "#0080C0";
+                                            break;
+                                    }
+                                }
+                            }
+                            break;
+
+                        /**
+                         *39代表→事件
+                         */
+                        case 39:alert("请先选择1。。")
+                            break;
+
+                        /**
+                         * 40代表下事件
+                         */
+                        case 40:
+                            sx1 = sx + 1;
+                            ax = Math.abs(sx % 5);
+                            if (sx1 > 0 ) {
+                                if (ax >= 0){
+                                    switch (ax) {
+                                        case 1:
+                                            dm1.style.backgroundColor = "#0080C0";
+                                            dm2.style.backgroundColor = "#C0C0C0";
+                                            dm3.style.backgroundColor = "#C0C0C0";
+                                            dm4.style.backgroundColor = "#C0C0C0";
+                                            dm5.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 2:
+                                            dm1.style.backgroundColor = "#C0C0C0";
+                                            dm2.style.backgroundColor = "#0080C0";
+                                            dm3.style.backgroundColor = "#C0C0C0";
+                                            dm4.style.backgroundColor = "#C0C0C0";
+                                            dm5.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 3:
+                                            dm1.style.backgroundColor = "#C0C0C0";
+                                            dm2.style.backgroundColor = "#C0C0C0";
+                                            dm3.style.backgroundColor = "#0080C0";
+                                            dm4.style.backgroundColor = "#C0C0C0";
+                                            dm5.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 4:
+                                            dm1.style.backgroundColor = "#C0C0C0";
+                                            dm2.style.backgroundColor = "#C0C0C0";
+                                            dm3.style.backgroundColor = "#C0C0C0";
+                                            dm4.style.backgroundColor = "#0080C0";
+                                            dm5.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 0:
+                                            dm1.style.backgroundColor = "#C0C0C0";
+                                            dm2.style.backgroundColor = "#C0C0C0";
+                                            dm3.style.backgroundColor = "#C0C0C0";
+                                            dm4.style.backgroundColor = "#C0C0C0";
+                                            dm5.style.backgroundColor = "#0080C0";
+                                            break;
+                                    }
+                                }
+                            }else {
+                                if (dm1.style.backgroundColor === ""){
+                                    sx1 = 1;
+                                    dm1.style.backgroundColor = "#0080C0";
+                                }else if (dm1.style.backgroundColor === "rgb(0, 128, 192)"){
+                                    sx1 = 2;
+                                    dm1.style.backgroundColor = "#C0C0C0";
+                                    dm2.style.backgroundColor = "#0080C0";
+                                }
+                            }
+                            break;
+                    }
+                }else {
+                    alert("请先选择。。")
+                }
+                break;
+
+            /**
+             * 38 代表↑事件
+             */
+            case 38:
+                sx = sx - 1;
+                a = sx % 5;
+                if (sx > 0 ) {
+                    if (a >= 0){
+                        switch (a) {
+                            case 1:
+                                sj.style.backgroundColor = "#0080C0";
+                                gj.style.backgroundColor = "#C0C0C0";
+                                yl1.style.backgroundColor = "#C0C0C0";
+                                yl2.style.backgroundColor = "#C0C0C0";
+                                yl3.style.backgroundColor = "#C0C0C0";
+                                break;
+                            case 2:
+                                sj.style.backgroundColor = "#C0C0C0";
+                                gj.style.backgroundColor = "#0080C0";
+                                yl1.style.backgroundColor = "#C0C0C0";
+                                yl2.style.backgroundColor = "#C0C0C0";
+                                yl3.style.backgroundColor = "#C0C0C0";
+                                break;
+                            case 3:
+                                sj.style.backgroundColor = "#C0C0C0";
+                                gj.style.backgroundColor = "#C0C0C0";
+                                yl1.style.backgroundColor = "#0080C0";
+                                yl2.style.backgroundColor = "#C0C0C0";
+                                yl3.style.backgroundColor = "#C0C0C0";
+                                break;
+                            case 4:
+                                sj.style.backgroundColor = "#C0C0C0";
+                                gj.style.backgroundColor = "#C0C0C0";
+                                yl1.style.backgroundColor = "#C0C0C0";
+                                yl2.style.backgroundColor = "#0080C0";
+                                yl3.style.backgroundColor = "#C0C0C0";
+                                break;
+                            case 0:
+                                sj.style.backgroundColor = "#C0C0C0";
+                                gj.style.backgroundColor = "#C0C0C0";
+                                yl1.style.backgroundColor = "#C0C0C0";
+                                yl2.style.backgroundColor = "#C0C0C0";
+                                yl3.style.backgroundColor = "#0080C0";
+                                break;
+                        }
+                    }
+                }
+                break;
+
+            /**
+             *39代表→事件
+             */
+            case 39:
+                q = sj.style.backgroundColor
+                if (q == "rgb(0, 128, 192)"){
+                    key2 = event.keyCode;
+                    switch (key2) {
+                        /**
+                         * 37代表←事件
+                         */
+                        case 37:console.log("左");
+                            break;
+
+                        /**
+                         * 38 代表↑事件
+                         */
+                        case 38:
+                            sx = sx - 1;
+                            a = sx % 5;
+                            if (sx > 0 ) {
+                                if (a >= 0){
+                                    switch (a) {
+                                        case 1:
+                                            sj.style.backgroundColor = "#0080C0";
+                                            gj.style.backgroundColor = "#C0C0C0";
+                                            yl1.style.backgroundColor = "#C0C0C0";
+                                            yl2.style.backgroundColor = "#C0C0C0";
+                                            yl3.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 2:
+                                            sj.style.backgroundColor = "#C0C0C0";
+                                            gj.style.backgroundColor = "#0080C0";
+                                            yl1.style.backgroundColor = "#C0C0C0";
+                                            yl2.style.backgroundColor = "#C0C0C0";
+                                            yl3.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 3:
+                                            sj.style.backgroundColor = "#C0C0C0";
+                                            gj.style.backgroundColor = "#C0C0C0";
+                                            yl1.style.backgroundColor = "#0080C0";
+                                            yl2.style.backgroundColor = "#C0C0C0";
+                                            yl3.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 4:
+                                            sj.style.backgroundColor = "#C0C0C0";
+                                            gj.style.backgroundColor = "#C0C0C0";
+                                            yl1.style.backgroundColor = "#C0C0C0";
+                                            yl2.style.backgroundColor = "#0080C0";
+                                            yl3.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 0:
+                                            sj.style.backgroundColor = "#C0C0C0";
+                                            gj.style.backgroundColor = "#C0C0C0";
+                                            yl1.style.backgroundColor = "#C0C0C0";
+                                            yl2.style.backgroundColor = "#C0C0C0";
+                                            yl3.style.backgroundColor = "#0080C0";
+                                            break;
+                                    }
+                                }
+                            }
+                            break;
+
+                        /**
+                         *39代表→事件
+                         */
+                        case 39:alert("请先选择1。。")
+                            break;
+
+                        /**
+                         * 40代表下事件
+                         */
+                        case 40:
+                            sx1 = sx + 1;
+                            ax = Math.abs(sx % 5);
+                            if (sx1 > 0 ) {
+                                if (ax >= 0){
+                                    switch (ax) {
+                                        case 1:
+                                            dm1.style.backgroundColor = "#0080C0";
+                                            dm2.style.backgroundColor = "#C0C0C0";
+                                            dm3.style.backgroundColor = "#C0C0C0";
+                                            dm4.style.backgroundColor = "#C0C0C0";
+                                            dm5.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 2:
+                                            dm1.style.backgroundColor = "#C0C0C0";
+                                            dm2.style.backgroundColor = "#0080C0";
+                                            dm3.style.backgroundColor = "#C0C0C0";
+                                            dm4.style.backgroundColor = "#C0C0C0";
+                                            dm5.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 3:
+                                            dm1.style.backgroundColor = "#C0C0C0";
+                                            dm2.style.backgroundColor = "#C0C0C0";
+                                            dm3.style.backgroundColor = "#0080C0";
+                                            dm4.style.backgroundColor = "#C0C0C0";
+                                            dm5.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 4:
+                                            dm1.style.backgroundColor = "#C0C0C0";
+                                            dm2.style.backgroundColor = "#C0C0C0";
+                                            dm3.style.backgroundColor = "#C0C0C0";
+                                            dm4.style.backgroundColor = "#0080C0";
+                                            dm5.style.backgroundColor = "#C0C0C0";
+                                            break;
+                                        case 0:
+                                            dm1.style.backgroundColor = "#C0C0C0";
+                                            dm2.style.backgroundColor = "#C0C0C0";
+                                            dm3.style.backgroundColor = "#C0C0C0";
+                                            dm4.style.backgroundColor = "#C0C0C0";
+                                            dm5.style.backgroundColor = "#0080C0";
+                                            break;
+                                    }
+                                }
+                            }else {
+                                if (dm1.style.backgroundColor === ""){
+                                    sx1 = 1;
+                                    dm1.style.backgroundColor = "#0080C0";
+                                }else if (dm1.style.backgroundColor === "rgb(0, 128, 192)"){
+                                    sx1 = 2;
+                                    dm1.style.backgroundColor = "#C0C0C0";
+                                    dm2.style.backgroundColor = "#0080C0";
+                                }
+                            }
+                            break;
+                    }
+                }else {
+                    alert("请先选择。。")
+                }
+                break;
+
+            /**
+             * 40代表下事件
+             */
+            case 40:
+                sx = sx + 1;
+                a = Math.abs(sx % 5);
+                if (sx > 0 ) {
+                    if (a >= 0){
+                        switch (a) {
+                            case 1:
+                                sj.style.backgroundColor = "#0080C0";
+                                gj.style.backgroundColor = "#C0C0C0";
+                                yl1.style.backgroundColor = "#C0C0C0";
+                                yl2.style.backgroundColor = "#C0C0C0";
+                                yl3.style.backgroundColor = "#C0C0C0";
+                                break;
+                            case 2:
+                                sj.style.backgroundColor = "#C0C0C0";
+                                gj.style.backgroundColor = "#0080C0";
+                                yl1.style.backgroundColor = "#C0C0C0";
+                                yl2.style.backgroundColor = "#C0C0C0";
+                                yl3.style.backgroundColor = "#C0C0C0";
+                                break;
+                            case 3:
+                                sj.style.backgroundColor = "#C0C0C0";
+                                gj.style.backgroundColor = "#C0C0C0";
+                                yl1.style.backgroundColor = "#0080C0";
+                                yl2.style.backgroundColor = "#C0C0C0";
+                                yl3.style.backgroundColor = "#C0C0C0";
+                                break;
+                            case 4:
+                                sj.style.backgroundColor = "#C0C0C0";
+                                gj.style.backgroundColor = "#C0C0C0";
+                                yl1.style.backgroundColor = "#C0C0C0";
+                                yl2.style.backgroundColor = "#0080C0";
+                                yl3.style.backgroundColor = "#C0C0C0";
+                                break;
+                            case 0:
+                                sj.style.backgroundColor = "#C0C0C0";
+                                gj.style.backgroundColor = "#C0C0C0";
+                                yl1.style.backgroundColor = "#C0C0C0";
+                                yl2.style.backgroundColor = "#C0C0C0";
+                                yl3.style.backgroundColor = "#0080C0";
+                                break;
+                        }
+                    }
+                }else {
+                    if (sj.style.backgroundColor === ""){
+                        sx = 1;
+                        sj.style.backgroundColor = "#0080C0";
+                    }else if (sj.style.backgroundColor === "rgb(0, 128, 192)"){
+                        sx = 2;
+                        sj.style.backgroundColor = "#C0C0C0";
+                        gj.style.backgroundColor = "#0080C0";
+                    }
+                }
+                break;
+
+        }
+    }
+    document.onkeydown=showkey;
+
+</script>
+</body>
+</html>
